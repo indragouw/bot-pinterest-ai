@@ -1,0 +1,57 @@
+name: Pinterest Auto-Pin Bot (Pexels)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Jalankan setiap 6 jam
+    - cron: '0 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Google Chrome
+      uses: browser-actions/setup-chrome@v1
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Pexels Bot
+      run: node bot.js
+      env:
+        PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        BOT_LICENSE_EMAIL: ${{ secrets.BOT_LICENSE_EMAIL }}
+        PINTEREST_COOKIES: ${{ secrets.PINTEREST_COOKIES }}
+
+    - name: Commit and push changes
+      if: success()
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add used_images.txt last_keyword_index.txt
+        if ! git diff --staged --quiet; then
+          git commit -m "Update Pexels content logs"
+          git push
+        else
+          echo "No changes to commit."
+        fi
+        
+    - name: Upload Artifacts on Failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: error-artifacts-pexels
+        path: error_screenshot.png
