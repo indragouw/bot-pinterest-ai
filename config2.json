@@ -4,8 +4,8 @@
     "keywordFile": "keywords.txt"
   },
   "rss": {
-    "feedUrl": "https://news.unmuhjember.ac.id/feeds/posts/default",
-    "startFromLink": "https://news.unmuhjember.ac.id/2025/07/melawan-diri-sendiri-adam-buktikan-bisa.html",
+    "feedUrl": "https://ainews88.blogspot.com/feeds/posts/default",
+    "startFromLink": "https://ainews88.blogspot.com/2025/07/cek-penerima-pip-juli-2025-lewat.html",
     "descriptionMode": "AI_WITH_TITLE"
   },
   "pinterest": {
@@ -13,11 +13,15 @@
   },
   "gemini": {
     "prompt": "Buat judul dan deskripsi singkat yang menarik untuk pin Pinterest. Gambar ini tentang: {keyword}. Fokus pada inspirasi dan ide. Sertakan 3-4 hashtag relevan. Formatnya harus: Judul: [Judul Anda] Deskripsi: [Deskripsi Anda]",
+    "tagsPrompt": "Berdasarkan judul pin ini: \"{pinTitle}\", berikan 5 set huruf pancingan (masing-masing 3-5 huruf, tanpa hashtag, pisahkan dengan koma) untuk memancing saran interest tags di Pinterest. Contoh: dekor,kama,inspir,ruma,ide",
     "rssPrompt": "Buat deskripsi pin Pinterest yang menarik berdasarkan judul artikel ini: \"{articleTitle}\". Ajak orang untuk membaca artikelnya di website kami. Sertakan 3-4 hashtag yang relevan.",
     "fallbackTitle": "Inspirasi Keren untuk Anda",
     "fallbackDescription": "Temukan lebih banyak ide seperti ini di board kami! #inspirasi #idekreatif"
   },
   "settings": {
-    "destinationLink": "https://website-atau-blog-anda.com"
+    "destinationLink": "https://ainews88.blogspot.com"
+  },
+  "tags": {
+    "count": 3
   }
 }
