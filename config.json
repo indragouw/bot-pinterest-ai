@@ -3,16 +3,16 @@
     "keywordFile": "keywords.txt"
   },
   "pinterest": {
-    "boardUrl": "https://id.pinterest.com/arenatopup/update/"
+    "boardUrl": "https://id.pinterest.com/thedramabox/dramabox/"
   },
   "gemini": {
     "prompt": "Buat judul dan deskripsi singkat yang menarik untuk pin Pinterest. Gambar ini tentang: {keyword}. Fokus pada inspirasi dan ide. Sertakan 3-4 hashtag relevan. Formatnya harus: Judul: [Judul Anda] Deskripsi: [Deskripsi Anda]",
-    "tagsPrompt": "Berdasarkan judul pin ini: \"{pinTitle}\", berikan 5 kata kunci pencarian paling relevan (masing-masing satu kata, tanpa hashtag, pisahkan dengan koma) untuk mencari interest tags di Pinterest. Contoh: dekorasi,kamar,tidur,inspirasi,rumah",
-    "fallbackTitle": "Inspirasi Keren untuk Anda",
-    "fallbackDescription": "Temukan lebih banyak ide seperti ini di board kami! #inspirasi #idekreatif"
+    "tagsPrompt": "Berdasarkan judul pin ini: \"{pinTitle}\", berikan 5 kata kunci pencarian paling relevan (masing-masing satu kata, tanpa hashtag, pisahkan dengan koma) untuk mencari interest tags di Pinterest. Contoh: drama,kisah cinta,perselingkuhan,inspirasi,rumah",
+    "fallbackTitle": "Drama Terbaru Untuk Anda",
+    "fallbackDescription": "Temukan lebih banyak kisah drama terbaru! #inspirasi #idekreatif"
   },
   "settings": {
-    "destinationLink": "https://arenatopup.com"
+    "destinationLink": "https://dramadisk.club"
   },
   "tags": {
     "count": 3
